@@ -59,21 +59,52 @@ begin
       result => result
     );
 
-  -- Stimulus process.
+  -- Stimulus process with multiple test cases.
   stim_proc: process
   begin
+    -- Initial reset.
     rst <= '1';
     wait for 20 ns;
     rst <= '0';
     wait for 10 ns;  -- Let the first rising edge occur after reset is deasserted.
-
-    A <= x"40A00000";  -- 5.0 in IEEE754 single precision
-    B <= x"40400000";  -- 3.0 in IEEE754 single precision
-
-    wait for 40 ns;
     
+    -- Test #1: 5.0 * 3.0 = 15.0
+    A <= x"40A00000";  -- 5.0
+    B <= x"40400000";  -- 3.0
+    wait for 40 ns;    
     report "Test #1: 5.0 * 3.0 = 0x" & to_hex(result) severity note;
-    wait;  -- Infinite wait to keep simulation running.
+    -- Expected: 0x41700000 (15.0)
+
+    -- Test #2: -2.0 * 4.0 = -8.0
+    A <= x"C0000000";  -- -2.0
+    B <= x"40800000";  -- 4.0
+    wait for 40 ns;
+    report "Test #2: -2.0 * 4.0 = 0x" & to_hex(result) severity note;
+    -- Expected: 0xC1000000 (-8.0)
+
+    -- Test #3: 1.5 * 2.0 = 3.0
+    A <= x"3FC00000";  -- 1.5
+    B <= x"40000000";  -- 2.0
+    wait for 40 ns;
+    report "Test #3: 1.5 * 2.0 = 0x" & to_hex(result) severity note;
+    -- Expected: 0x40400000 (3.0)
+
+    -- Test #4: 0.5 * 0.5 = 0.25
+    A <= x"3F000000";  -- 0.5
+    B <= x"3F000000";  -- 0.5
+    wait for 40 ns;
+    report "Test #4: 0.5 * 0.5 = 0x" & to_hex(result) severity note;
+    -- Expected: 0x3E800000 (0.25)
+
+    -- Test #5: -1.0 * -1.0 = 1.0
+    A <= x"BF800000";  -- -1.0
+    B <= x"BF800000";  -- -1.0
+    wait for 40 ns;
+    report "Test #5: -1.0 * -1.0 = 0x" & to_hex(result) severity note;
+    -- Expected: 0x3F800000 (1.0)
+
+    wait;  -- End simulation (infinite wait)
   end process;
 
 end behavior;
+
