@@ -103,8 +103,21 @@ begin
     report "Test #5: -1.0 * -1.0 = 0x" & to_hex(result) severity note;
     -- Expected: 0x3F800000 (1.0)
 
+    -- Test #6: 10.0 * 10.0 = 100.0
+    A <= x"41200000";  -- 10.0
+    B <= x"41200000";  -- 10.0
+    wait for 40 ns;
+    report "Test #6: 10.0 * 10.0 = 0x" & to_hex(result) severity note;
+    -- Expected: 0x42C80000 (100.0)
+
+    -- Test #7: 1.0 * -0.25 = -0.25
+    A <= x"3F800000";  -- 1.0
+    B <= x"BE800000";  -- -0.25
+    wait for 40 ns;
+    report "Test #7: 1.0 * -0.25 = 0x" & to_hex(result) severity note;
+    -- Expected: 0xBE800000 (-0.25)
+
     wait;  -- End simulation (infinite wait)
   end process;
 
 end behavior;
-
