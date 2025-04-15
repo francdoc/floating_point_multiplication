@@ -4,7 +4,7 @@ K3
 cModel Technology
 d/home/franco/CLP/Recursos/Guia_General/Ejercicios/Ej18
 Efp_multiplier
-Z0 w1744484341
+Z0 w1744699368
 Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -12,26 +12,26 @@ Z4 d/home/franco/CLP/Recursos/TP_FINAL/Simulacion
 Z5 8/home/franco/CLP/Recursos/TP_FINAL/Fuente/fp_multiplier.vhd
 Z6 F/home/franco/CLP/Recursos/TP_FINAL/Fuente/fp_multiplier.vhd
 l0
-L5
+L25
 V?jhcRiGF:4bL]`jH9BVLF0
 Z7 OV;C;10.1d;51
 32
-Z8 !s108 1744484860.312834
+Z8 !s108 1744755191.075719
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/franco/CLP/Recursos/TP_FINAL/Fuente/fp_multiplier.vhd|
 Z10 !s107 /home/franco/CLP/Recursos/TP_FINAL/Fuente/fp_multiplier.vhd|
 Z11 o-work work -2002 -explicit -O0
 Z12 tExplicit 1
-!s100 ?=mW?T8gJi5kRPPCHZA2Y2
+!s100 HK=J>FZmaJe^CGAg<^hG<3
 !i10b 1
 Abehavior
 R1
 R2
 R3
 DEx4 work 13 fp_multiplier 0 22 ?jhcRiGF:4bL]`jH9BVLF0
-l16
-L15
+l36
+L35
 V_z?`8[E3bFd]QcX30P2Wj3
-!s100 Oz6aK@F9=hETHK1]9?@440
+!s100 KLD1_;;hATR<HK^XfY7IN3
 R7
 32
 R8
@@ -41,7 +41,7 @@ R11
 R12
 !i10b 1
 Etb_fp_multiplier
-Z13 w1744484851
+Z13 w1744755181
 R1
 R2
 R3
@@ -49,13 +49,13 @@ R4
 Z14 8/home/franco/CLP/Recursos/TP_FINAL/Fuente/tb_fp_multiplier.vhd
 Z15 F/home/franco/CLP/Recursos/TP_FINAL/Fuente/tb_fp_multiplier.vhd
 l0
-L5
+L6
 V^a61WL4OR;H9ZjQ:Q6g1f0
-!s100 ;P@UCLOTgl[h=k]ZLh07f3
+!s100 Mk<VEez0Bf3LCcz:7G9?h3
 R7
 32
 !i10b 1
-Z16 !s108 1744484860.332089
+Z16 !s108 1744755191.096772
 Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/franco/CLP/Recursos/TP_FINAL/Fuente/tb_fp_multiplier.vhd|
 Z18 !s107 /home/franco/CLP/Recursos/TP_FINAL/Fuente/tb_fp_multiplier.vhd|
 R11
@@ -65,10 +65,10 @@ R1
 R2
 R3
 Z19 DEx4 work 16 tb_fp_multiplier 0 22 ^a61WL4OR;H9ZjQ:Q6g1f0
-l39
-L8
-Vk?@oU7VA[T`9zXilEeV_;3
-!s100 g8^ZC1_6SajY1hHe`Ug633
+l41
+L9
+Z20 Vk?@oU7VA[T`9zXilEeV_;3
+!s100 kiH@d62BQ<T:4e3K7eZ>22
 R7
 32
 !i10b 1
