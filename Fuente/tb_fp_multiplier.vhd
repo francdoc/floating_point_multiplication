@@ -32,7 +32,7 @@ architecture behavior of tb_fp_multiplier is
     variable nibble: unsigned(3 downto 0);              -- Variable temporal para cada nibble (4 bits).
   begin
     for i in 0 to 7 loop
-      nibble := unsigned(slv((31 - 4*i) downto (28 - 4*i)));  -- Extrae cada nibble.
+      nibble := unsigned(slv((31 - 4*i) downto (28 - 4*i)));    -- Extrae cada nibble.
       result_str(i+1) := hex_chars(to_integer(nibble) + 1);     -- Convierte el nibble a su correspondiente carácter hexadecimal.
     end loop;
     return result_str;

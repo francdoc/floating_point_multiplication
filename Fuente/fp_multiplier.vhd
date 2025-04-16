@@ -11,7 +11,7 @@ use IEEE.numeric_std.all;
 
 -- En el formato IEEE‑754 de precisión simple (32 bits), un número normalizado se representa de la siguiente manera:
 --    Valor = (−1)^(S)x2^(E−bias)×(1.f)
---    donde:
+--    Donde:
 --          S es el bit de signo.
 --          E es el exponente almacenado en 8 bits.
 --          bias es el sesgo, que para precisión simple es 127.
@@ -108,7 +108,6 @@ begin
         -- Se descarta entonces el bit 47 (ya que el "1" implícito se reconstruirá) y se seleccionan los bits 46 hasta 24 para formar la mantisa final (23 bits) acorde al estándar IEEE‑754 de precisión simple (32 bits).
         -- Al seleccionar los bits de 46 a 24 de la señal product_mant, se está realizando un desplazamiento a la derecha de una posición. Lo cual equivale a dividir el valor (el significando del producto) por 2.
         product_mant_norm := product_mant(46 downto 24);
-        -- Al desplazar el producto a la derecha (equivalente a dividir entre 2), el valor del significando disminuye en un factor de 2. 
         -- Para mantener el valor global del número igual, se debe compensar aumentando el exponente en 1.
         exp_res := exp_temp + 1;
       
@@ -120,7 +119,7 @@ begin
       end if;
 
       -- Empaqueta el bit de signo, el exponente y la mantisa normalizada en un vector de 32 bits,
-      -- según el formato IEEE‑754, y asigna ese vector a la salida 'result'.      r
+      -- según el formato IEEE‑754, y asigna ese vector a la salida 'result'.
       res_temp := sign_res 
                   & std_logic_vector(exp_res) 
                   & std_logic_vector(product_mant_norm);
