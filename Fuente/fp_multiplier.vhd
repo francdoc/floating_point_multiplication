@@ -34,7 +34,7 @@ end fp_multiplier;
 
 architecture behavior of fp_multiplier is
 begin
-  process(clk, rst)
+  process(clk)
   -- Variables locales que se utilizan dentro del proceso, las cuales se actualizan en cada ciclo de reloj para realizar todas las operaciones necesarias en la multiplicación de dos números en coma flotante IEEE‑754 de 32 bits.
     
     -- sign_A y sign_B se utilizan para almacenar el bit de signo (bit 31; bits numerados del 0 al 31) de cada uno de los operandos de entrada A y B.
@@ -68,62 +68,62 @@ begin
 
     --res_temp es el vector resultante de 32 bits que corresponde a la representación IEEE-754 final del producto de A y B.
     variable res_temp                 : std_logic_vector(31 downto 0);
+
   begin
-    -- Se revisa si la señal de reset (rst) está activada, si lo está entonces todos los bits del vector de 32 bits que forma result valen '0'.
-    -- Al forzar el resultado a cero se garantiza que el sistema empieza en un estado conocido y seguro al haber un reset. Hasta que no se desactive el reset, el sistema no procesa datos y siempre da un resultado de salida cero.
-    if rst = '1' then
-      result <= (others => '0');
+    if rising_edge(clk) then
+      -- Se revisa si la señal de reset (rst) está activada, si lo está entonces todos los bits del vector de 32 bits que forma result valen '0'.
+      if rst = '1' then
+        result <= (others => '0');
+      else -- Se activa la operación del multiplicador de forma sincronada con el clock, sólo se ejecuta el código del proceso en cada flanco ascendente.
+        -- Se extraen el bit de signo (bit 31), los 8 bits del exponente (bits 30 downto 23) y los 23 bits de la mantisa (bits 22 downto 0) del número en formato IEEE‑754.
+        sign_A := A(31);
+        sign_B := B(31);
+        exp_A  := unsigned(A(30 downto 23));
+        exp_B  := unsigned(B(30 downto 23));
+        mant_A := A(22 downto 0);
+        mant_B := B(22 downto 0);
 
-    -- Se activa la operación del multiplicador de forma sincronada con el clock, sólo se ejecuta el código del proceso en cada flanco ascendente.
-    elsif rising_edge(clk) then
-      -- -- Se extraen el bit de signo (bit 31), los 8 bits del exponente (bits 30 downto 23) y los 23 bits de la mantisa (bits 22 downto 0) del número en formato IEEE‑754.
-      sign_A := A(31);
-      sign_B := B(31);
-      exp_A  := unsigned(A(30 downto 23));
-      exp_B  := unsigned(B(30 downto 23));
-      mant_A := A(22 downto 0);
-      mant_B := B(22 downto 0);
+        -- Se convierten mant_A y mant_B a tipo unsigned para permitir operaciones aritméticas.
+        -- Se antepone el '1' implícito (que no se almacena en el formato IEEE-754) para formar el significando completo de 24 bits tanto para mant_A_ext como para mant_B_ext.
+        -- Este procedimiento asume que A y B son números normalizados. Es decir, que su campo de exponente no es cero.
+        mant_A_ext := "1" & unsigned(mant_A);
+        mant_B_ext := "1" & unsigned(mant_B);
 
-      -- Se convierten mant_A y mant_B a tipo unsigned para permitir operaciones aritméticas.
-      -- Se antepone el '1' implícito (que no se almacena en el formato IEEE-754) para formar el significando completo de 24 bits tanto para mant_A_ext como para mant_B_ext.
-      -- Este procedimiento asume que A y B son números normalizados. Es decir, que su campo de exponente no es cero.
-      mant_A_ext := "1" & unsigned(mant_A);
-      mant_B_ext := "1" & unsigned(mant_B);
+        -- Se calcula el signo del resultado (operación XOR de los signos de las entradas).
+        sign_res := sign_A xor sign_B;
 
-      -- Se calcula el signo del resultado (operación XOR de los signos de las entradas).
-      sign_res := sign_A xor sign_B;
+        -- Se calcula el exponente: (exp_A + exp_B - bias) donde bias es 127. 
+        -- Se extiende a 9 bits (concatenando un '0' al inicio) para evitar cualquier overflow durante la suma de los exponentes.
+        exp_temp := ('0' & exp_A) + ('0' & exp_B) - to_unsigned(127, 9);
 
-      -- Se calcula el exponente: (exp_A + exp_B - bias) donde bias es 127. 
-      -- Se extiende a 9 bits (concatenando un '0' al inicio) para evitar cualquier overflow durante la suma de los exponentes.
-      exp_temp := ('0' & exp_A) + ('0' & exp_B) - to_unsigned(127, 9);
+        -- Se multiplican las mantisas extendidas (con el "1" implícito añadido), resultando en un valor de 48 bits almacenado en product_mant.
+        product_mant := mant_A_ext * mant_B_ext;
 
-      -- Se multiplican las mantisas extendidas (con el "1" implícito añadido), resultando en un valor de 48 bits almacenado en product_mant.
-      product_mant := mant_A_ext * mant_B_ext;
+        -- Si cada número individual (está en el rango [1,2): el número resultante se escribe como 1.xxx (en binario), por lo que el bit más significativo (el bit 47 del producto de 48 bits) será 0.
+        -- Si cada número individual está en el rango [2,4): el número resultante se expresa en binario como 10.xxx, lo cual implica que el bit 47 es 1.
 
-      -- Si cada número individual (está en el rango [1,2): el número resultante se escribe como 1.xxx (en binario), por lo que el bit más significativo (el bit 47 del producto de 48 bits) será 0.
-      -- Si cada número individual está en el rango [2,4): el número resultante se expresa en binario como 10.xxx, lo cual implica que el bit 47 es 1.
+        -- Esta posibilidad se ejecuta si el bit 47 del producto (product_mant(47)) es '1'.
+        if product_mant(47) = '1' then
+          -- Se descarta entonces el bit 47 (ya que el "1" implícito se reconstruirá) y se seleccionan los bits 46 hasta 24 para formar la mantisa final (23 bits) acorde al estándar IEEE‑754 de precisión simple (32 bits).
+          -- Al seleccionar los bits de 46 a 24 de la señal product_mant, se está realizando un desplazamiento a la derecha de una posición. Lo cual equivale a dividir el valor (el significando del producto) por 2.
+          product_mant_norm := product_mant(46 downto 24);
+          -- Para mantener el valor global del número igual, se debe compensar aumentando el exponente en 1.
+          exp_res := exp_temp + 1;
+        
+        else
+          -- Esta posibilidad se ejecuta si el bit 47 del producto (product_mant(47)) es '0'.
+          -- Entonces se toman directamente los bits 45 a 23 para formar la mantisa final acorde al estándar IEEE‑754 de precisión simple (32 bits).
+          product_mant_norm := product_mant(45 downto 23);
+          exp_res := exp_temp(7 downto 0);
+        end if;
 
-      -- Esta posibilidad se ejecuta si el bit 47 del producto (product_mant(47)) es '1'.
-      if product_mant(47) = '1' then
-        -- Se descarta entonces el bit 47 (ya que el "1" implícito se reconstruirá) y se seleccionan los bits 46 hasta 24 para formar la mantisa final (23 bits) acorde al estándar IEEE‑754 de precisión simple (32 bits).
-        -- Al seleccionar los bits de 46 a 24 de la señal product_mant, se está realizando un desplazamiento a la derecha de una posición. Lo cual equivale a dividir el valor (el significando del producto) por 2.
-        product_mant_norm := product_mant(46 downto 24);
-        -- Para mantener el valor global del número igual, se debe compensar aumentando el exponente en 1.
-        exp_res := exp_temp + 1;
-      
-      else
-      -- Esta posibilidad se ejecuta si el bit 47 del producto (product_mant(47)) es '0'.
-      -- Entonces se toman directamente los bits 45 a 23 para formar la mantisa final acorde al estándar IEEE‑754 de precisión simple (32 bits).
-        product_mant_norm := product_mant(45 downto 23);
-        exp_res := exp_temp(7 downto 0);
+        -- Empaqueta el bit de signo, el exponente y la mantisa normalizada en un vector de 32 bits,
+        -- según el formato IEEE‑754, y asigna ese vector a la salida 'result'.
+        res_temp := sign_res 
+                    & std_logic_vector(exp_res) 
+                    & std_logic_vector(product_mant_norm);
+        result <= res_temp;
       end if;
-
-      -- Empaqueta el bit de signo, el exponente y la mantisa normalizada en un vector de 32 bits,
-      -- según el formato IEEE‑754, y asigna ese vector a la salida 'result'.
-      res_temp := sign_res 
-                  & std_logic_vector(exp_res) 
-                  & std_logic_vector(product_mant_norm);
-      result <= res_temp;
     end if;
   end process;
 end behavior;
