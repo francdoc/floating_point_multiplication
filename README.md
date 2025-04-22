@@ -12,3 +12,8 @@ A partir de ahí:
 2. Se multiplican ambas mantisas (48 bits de producto).  
 3. Se normaliza el resultado (ajuste de mantisa y exponente).  
 4. Se empaqueta de nuevo en 32 bits (signo–exponente–mantisa).
+
+### Contexto
+Este proyecto fue desarrollado como parte del curso Circuitos Lógicos Programables, perteniente a la Especialización en Sistemas Embebidos de FIUBA.
+
+**Profesor**: Nicolás Álvarez
