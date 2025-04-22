@@ -1,0 +1,332 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Apr 21 21:34:36 2025
+# Process ID: 1837722
+# Current directory: /home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.runs/synth_1
+# Command line: vivado -log fp_multiplier_VIO.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fp_multiplier_VIO.tcl
+# Log file: /home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.runs/synth_1/fp_multiplier_VIO.vds
+# Journal file: /home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source fp_multiplier_VIO.tcl -notrace
+Command: synth_design -top fp_multiplier_VIO -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1837767 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1270.516 ; gain = 83.000 ; free physical = 1965 ; free virtual = 10475
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fp_multiplier_VIO' [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier_VIO.vhd:12]
+INFO: [Synth 8-3491] module 'fp_multiplier' declared at '/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:25' bound to instance 'fp_multiplier_inst' of component 'fp_multiplier' [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier_VIO.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'fp_multiplier' [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:35]
+WARNING: [Synth 8-6014] Unused sequential element sign_A_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:79]
+WARNING: [Synth 8-6014] Unused sequential element sign_B_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:80]
+WARNING: [Synth 8-6014] Unused sequential element exp_A_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:81]
+WARNING: [Synth 8-6014] Unused sequential element exp_B_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:82]
+WARNING: [Synth 8-6014] Unused sequential element mant_A_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element mant_B_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element mant_A_ext_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:89]
+WARNING: [Synth 8-6014] Unused sequential element mant_B_ext_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:90]
+WARNING: [Synth 8-6014] Unused sequential element sign_res_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:93]
+WARNING: [Synth 8-6014] Unused sequential element exp_temp_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:97]
+WARNING: [Synth 8-6014] Unused sequential element product_mant_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element product_mant_norm_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element exp_res_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element res_temp_reg was removed.  [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:122]
+INFO: [Synth 8-256] done synthesizing module 'fp_multiplier' (1#1) [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:35]
+INFO: [Synth 8-3491] module 'vio_0' declared at '/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.runs/synth_1/.Xil/Vivado-1837722-franco-ThinkPad-E15-Gen-2/realtime/vio_0_stub.vhdl:5' bound to instance 'vio_inst' of component 'vio_0' [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier_VIO.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'vio_0' [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.runs/synth_1/.Xil/Vivado-1837722-franco-ThinkPad-E15-Gen-2/realtime/vio_0_stub.vhdl:16]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fp_multiplier_inst'. This will prevent further optimization [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier_VIO.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'fp_multiplier_VIO' (2#1) [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier_VIO.vhd:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1314.125 ; gain = 126.609 ; free physical = 1954 ; free virtual = 10463
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1314.125 ; gain = 126.609 ; free physical = 1954 ; free virtual = 10464
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1314.125 ; gain = 126.609 ; free physical = 1954 ; free virtual = 10464
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/ip/vio_0_1/vio_0/vio_0_in_context.xdc] for cell 'vio_inst'
+Finished Parsing XDC File [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/ip/vio_0_1/vio_0/vio_0_in_context.xdc] for cell 'vio_inst'
+Parsing XDC File [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/constrs_1/imports/Fuente/ArtyZ7_10.xdc]
+Finished Parsing XDC File [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/constrs_1/imports/Fuente/ArtyZ7_10.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/constrs_1/imports/Fuente/ArtyZ7_10.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fp_multiplier_VIO_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fp_multiplier_VIO_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1646.207 ; gain = 0.000 ; free physical = 1812 ; free virtual = 10321
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1872 ; free virtual = 10384
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1872 ; free virtual = 10384
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for vio_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1874 ; free virtual = 10385
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.srcs/sources_1/imports/Fuente/fp_multiplier.vhd:100]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1872 ; free virtual = 10384
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fp_multiplier 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP exp_res1, operation Mode is: A*B.
+DSP Report: operator exp_res1 is absorbed into DSP exp_res1.
+DSP Report: operator exp_res1 is absorbed into DSP exp_res1.
+DSP Report: Generating DSP exp_res1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exp_res1 is absorbed into DSP exp_res1.
+DSP Report: operator exp_res1 is absorbed into DSP exp_res1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1854 ; free virtual = 10367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fp_multiplier | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_multiplier | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1706 ; free virtual = 10217
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1706 ; free virtual = 10218
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1704 ; free virtual = 10217
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1704 ; free virtual = 10217
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1704 ; free virtual = 10217
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1704 ; free virtual = 10217
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1704 ; free virtual = 10217
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1704 ; free virtual = 10217
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1704 ; free virtual = 10217
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |vio_0         |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |vio_0_bbox_0 |     1|
+|2     |BUFG         |     1|
+|3     |CARRY4       |     4|
+|4     |DSP48E1      |     2|
+|5     |LUT2         |    15|
+|6     |LUT3         |    32|
+|7     |LUT4         |     5|
+|8     |FDRE         |    32|
+|9     |IBUF         |     1|
++------+-------------+------+
+
+Report Instance Areas: 
++------+---------------------+--------------+------+
+|      |Instance             |Module        |Cells |
++------+---------------------+--------------+------+
+|1     |top                  |              |   157|
+|2     |  fp_multiplier_inst |fp_multiplier |    90|
++------+---------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1704 ; free virtual = 10217
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1646.207 ; gain = 126.609 ; free physical = 1770 ; free virtual = 10283
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 1646.207 ; gain = 458.691 ; free physical = 1770 ; free virtual = 10283
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 1675.223 ; gain = 507.164 ; free physical = 1696 ; free virtual = 10210
+INFO: [Common 17-1381] The checkpoint '/home/franco/CLP/Recursos/CESE_CLP_TPFINAL/fp_mult.runs/synth_1/fp_multiplier_VIO.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fp_multiplier_VIO_utilization_synth.rpt -pb fp_multiplier_VIO_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1699.234 ; gain = 0.000 ; free physical = 1697 ; free virtual = 10211
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 21 21:35:26 2025...

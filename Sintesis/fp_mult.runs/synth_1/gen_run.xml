@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1745282074">
+  <File Type="VDS-TIMING-PB" Name="fp_multiplier_VIO_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="fp_multiplier_VIO_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="fp_multiplier_VIO.dcp"/>
+  <File Type="PA-TCL" Name="fp_multiplier_VIO.tcl"/>
+  <File Type="REPORTS-TCL" Name="fp_multiplier_VIO_reports.tcl"/>
+  <File Type="RDS-RDS" Name="fp_multiplier_VIO.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="fp_multiplier_VIO_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="fp_multiplier_VIO_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="fp_multiplier_VIO_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/vio_0_1/vio_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Fuente/fp_multiplier.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../TP_FINAL/Fuente/fp_multiplier.vhd"/>
+        <Attr Name="ImportTime" Val="1745280504"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Fuente/fp_multiplier_VIO.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../TP_FINAL/Fuente/fp_multiplier_VIO.vhd"/>
+        <Attr Name="ImportTime" Val="1745278618"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="fp_multiplier_VIO"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Fuente/ArtyZ7_10.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../TP_FINAL/Fuente/ArtyZ7_10.xdc"/>
+        <Attr Name="ImportTime" Val="1745201118"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

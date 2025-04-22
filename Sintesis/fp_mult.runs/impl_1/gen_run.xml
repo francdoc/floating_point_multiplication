@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1745282133">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="fp_multiplier_VIO.drc"/>
+  <File Type="BG-BGN" Name="fp_multiplier_VIO.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="fp_multiplier_VIO.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="fp_multiplier_VIO.ltx"/>
+  <File Type="BITSTR-MMI" Name="fp_multiplier_VIO.mmi"/>
+  <File Type="BITSTR-BMM" Name="fp_multiplier_VIO_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="fp_multiplier_VIO.nky"/>
+  <File Type="BITSTR-RBT" Name="fp_multiplier_VIO.rbt"/>
+  <File Type="BITSTR-MSK" Name="fp_multiplier_VIO.msk"/>
+  <File Type="BG-BIN" Name="fp_multiplier_VIO.bin"/>
+  <File Type="BG-BIT" Name="fp_multiplier_VIO.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="fp_multiplier_VIO_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="fp_multiplier_VIO_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="fp_multiplier_VIO_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="fp_multiplier_VIO_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="fp_multiplier_VIO_postroute_physopt.dcp"/>
+  <File Type="ROUTE-CLK" Name="fp_multiplier_VIO_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="fp_multiplier_VIO_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="fp_multiplier_VIO_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="fp_multiplier_VIO_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="fp_multiplier_VIO_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="fp_multiplier_VIO_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="fp_multiplier_VIO_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="fp_multiplier_VIO_power_routed.rpx"/>
+  <File Type="INIT-TIMING" Name="fp_multiplier_VIO_timing_summary_init.rpt"/>
+  <File Type="OPT-DRC" Name="fp_multiplier_VIO_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="fp_multiplier_VIO_opt.dcp"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="fp_multiplier_VIO_methodology_drc_opted.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="fp_multiplier_VIO_incremental_reuse_pre_placed.rpt"/>
+  <File Type="OPT-HWDEF" Name="fp_multiplier_VIO.hwdef"/>
+  <File Type="OPT-TIMING" Name="fp_multiplier_VIO_timing_summary_opted.rpt"/>
+  <File Type="REPORTS-TCL" Name="fp_multiplier_VIO_reports.tcl"/>
+  <File Type="PWROPT-DCP" Name="fp_multiplier_VIO_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="fp_multiplier_VIO_drc_pwropted.rpt"/>
+  <File Type="RDI-RDI" Name="fp_multiplier_VIO.vdi"/>
+  <File Type="PWROPT-TIMING" Name="fp_multiplier_VIO_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-IO" Name="fp_multiplier_VIO_io_placed.rpt"/>
+  <File Type="PA-TCL" Name="fp_multiplier_VIO.tcl"/>
+  <File Type="PLACE-DCP" Name="fp_multiplier_VIO_placed.dcp"/>
+  <File Type="PLACE-CLK" Name="fp_multiplier_VIO_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="fp_multiplier_VIO_timing_summary_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="fp_multiplier_VIO_utilization_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="fp_multiplier_VIO_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="fp_multiplier_VIO_utilization_placed.pb"/>
+  <File Type="PHYSOPT-TIMING" Name="fp_multiplier_VIO_timing_summary_physopted.rpt"/>
+  <File Type="PLACE-CTRL" Name="fp_multiplier_VIO_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="fp_multiplier_VIO_incremental_reuse_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="fp_multiplier_VIO_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="fp_multiplier_VIO_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="fp_multiplier_VIO_drc_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="fp_multiplier_VIO_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="fp_multiplier_VIO_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="fp_multiplier_VIO_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="fp_multiplier_VIO_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="fp_multiplier_VIO_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="fp_multiplier_VIO_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="fp_multiplier_VIO_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="fp_multiplier_VIO_drc_routed.rpx"/>
+  <File Type="ROUTE-PWR" Name="fp_multiplier_VIO_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="fp_multiplier_VIO_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="fp_multiplier_VIO_power_summary_routed.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/vio_0_1/vio_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Fuente/fp_multiplier.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../TP_FINAL/Fuente/fp_multiplier.vhd"/>
+        <Attr Name="ImportTime" Val="1745280504"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Fuente/fp_multiplier_VIO.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../TP_FINAL/Fuente/fp_multiplier_VIO.vhd"/>
+        <Attr Name="ImportTime" Val="1745278618"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="fp_multiplier_VIO"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Fuente/ArtyZ7_10.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../TP_FINAL/Fuente/ArtyZ7_10.xdc"/>
+        <Attr Name="ImportTime" Val="1745201118"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
